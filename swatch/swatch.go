@@ -2,11 +2,11 @@ package swatch
 
 import (
 	"image/color"
-	"pixl/apptype"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/widget"
+	"zerotomastery.io/pixl/apptype"
 )
 
 type Swatch struct {
@@ -29,7 +29,6 @@ func NewSwatch(state *apptype.State, color color.Color, swatchIndex int, clickHa
 		clickHandler: clickHandler,
 		SwatchIndex:  swatchIndex,
 	}
-
 	swatch.ExtendBaseWidget(swatch)
 	return swatch
 }

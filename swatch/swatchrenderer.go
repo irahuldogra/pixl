@@ -24,7 +24,6 @@ func (renderer *SwatchRenderer) Layout(size fyne.Size) {
 func (renderer *SwatchRenderer) Refresh() {
 	renderer.Layout(fyne.NewSize(20, 20))
 	renderer.square.FillColor = renderer.parent.Color
-
 	if renderer.parent.Selected {
 		renderer.square.StrokeWidth = 3
 		renderer.square.StrokeColor = color.NRGBA{255, 255, 255, 255}
@@ -33,7 +32,6 @@ func (renderer *SwatchRenderer) Refresh() {
 		renderer.square.StrokeWidth = 0
 		renderer.objects[0] = &renderer.square
 	}
-
 	canvas.Refresh(renderer.parent)
 }
 
